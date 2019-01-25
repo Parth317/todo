@@ -1,13 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Dimensions } from 'react-native';
 import { inputPlaceholder } from '../utils/Colors';
+
+const { width } = Dimensions.get('window');
 
 const Input = ({ inputValue, onChangeText, onDoneAddItem }) => (
   <TextInput
     style ={styles.input}
     value={inputValue}
     onChangeText={onChangeText}
-    placeholder="Pls type here to add note."
+    placeholder="Add a note."
     placeholderTextColor={inputPlaceholder}
     multiline={true}
     autoCapitalize="sentences"
@@ -28,6 +30,10 @@ const styles = StyleSheet.create({
     fontSize: 34,
     color: 'white',
     fontWeight: '500',
+    backgroundColor: 'rgba(0,0,0,.1)',
+    borderRadius: 5,
+    textAlign: 'center',
+    width: width - 50,
   },
 });
 

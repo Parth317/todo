@@ -5,12 +5,14 @@ import {
 	StatusBar,
 	ActivityIndicator,
 	ScrollView,
-	AsyncStorage
+	AsyncStorage,
+  ImageBackground
 } from 'react-native';
 import { LinearGradient } from 'expo';
 import uuid from 'uuid/v1';
 
 import { primaryGradientArray } from './utils/Colors';
+import Image from './utils/Images/baybridge.jpg';
 import Header from './components/Header';
 import SubTitle from './components/SubTitle';
 import Input from './components/Input';
@@ -140,7 +142,7 @@ export default class Main extends React.Component {
 		const { inputValue, loadingItems, allItems } = this.state;
 
 		return (
-			<LinearGradient colors={primaryGradientArray} style={styles.container}>
+			<ImageBackground source={Image} style={styles.container}>
 				<StatusBar barStyle="light-content" />
 				<View style={styles.centered}>
 					<Header title={headerTitle} />
@@ -179,7 +181,7 @@ export default class Main extends React.Component {
 						<ActivityIndicator size="large" color="white" />
 					)}
 				</View>
-			</LinearGradient>
+			</ImageBackground>
 		);
 	}
 }
