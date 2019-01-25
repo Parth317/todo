@@ -13,6 +13,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@expo/vector-icons": "^9.0.0",
     "babel-preset-expo": "^5.0.0"
   },
   "private": true
